@@ -77,9 +77,9 @@ def float_ex():
 def complex_ex(): # 복소수
     print("======== 복소수 연습")
     # 복소수 : 실수부 + 허수부 형태
-    a= 4+ 5j
+    a= 4+ 5j  # 실수부 4, 허수부 5인 복소수
     print(a, "is", type(a))
-    b = 7-2J
+    b = 7-2J # 실수부 7, 허수부 -2인 복소수
     print(b, "complex의 객체?", isinstance(b, complex))
 
     #복소수 -> 수치형 -> 산술연산
@@ -92,20 +92,22 @@ def complex_ex(): # 복소수
     # 타입 함수를 이용한 복소수의 생성
     c = 7
     d = 3
-    e = complex(7, 3) # 실수부 = 7 허수부 = 3
+    e = complex(7, 3) # 실수부 = 7 허수부 = 3 복소수 생성
     print(e, "is", type(e))
 
-def builtin_math_function():
-    print(abs(-1))
-    print(int(3.14159))
-    print(float(3))
-    print(complex(1))
-    print(divmod(5, 3))
-    print(pow(2, 10))
+def builtin_math_function():    # 내장 수치 함수
+    print(abs(-1)) # 절댓값
+    print(int(3.14159)) # 타입함수를 이용한 타입의 변환
+    print(float(3))     # 타입 변환
+    print(complex(1))   # 타입 변환
+    print(divmod(5, 3)) # 정수 나눗셈의 몫과 나머지 일괄 계산
+    print(pow(2, 10))   # == 2 ** 10
+
+
 
 if __name__ == "__main__":
-    #bool_ex()
-    #integer_ex()
-    #float_ex()
-    #complex_ex()
+    bool_ex()
+    integer_ex()
+    float_ex()
+    complex_ex()
     builtin_math_function()

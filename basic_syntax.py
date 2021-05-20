@@ -4,7 +4,7 @@ def arith_oper():   # 산술 연산자 연습
     print("====== 산술연산")
     # +, -, *, /
     print(7/3)  # 정수를 정수로 나눠도 실수형태로 표현
-    print(6/2)
+    print(6/2) # 정수 나눗셈의 나머지 연산자
 
     # // : 정수 나눗셈의 몫연산자
     print(7//3) # 정수 나눗셈의 몫
@@ -130,10 +130,10 @@ def bit_oper():
     print(bin(bits & 0b10)) # bit and
     print(bin(bits | 0b1111)) # bit or
 if __name__ == "__main__":
-    # arith_oper()
-    # complex_ex();
-    # rel_oper()
-    # variable_ex()
-    # assginment_ex()
-    #logical_oper()
-    bit_oper()
+     arith_oper()
+     complex_ex();
+     rel_oper()
+     variable_ex()
+     assginment_ex()
+     logical_oper()
+     bit_oper()
