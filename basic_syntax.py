@@ -116,11 +116,24 @@ def logical_oper():
     print(a < b and a != b) # a < b의 논리값과 a != b의 논리값의 논리곱
     print(a == b or a != b) # a == b의 논리값과 a != b의 논리값의 논리합
 
+def bit_oper():
+    print("========비트연산자")
+    print(bin(5), bin(~5))
+    # 비트 시프트 : <<(좌측으로 이동), >>(우측으로 이동)
+    bits =1
+    print(bin(bits))
+    bits = bits << 4
+    print(bin(bits))
 
+    bits = 0b10101010
+    print(bin(bits))
+    print(bin(bits & 0b10)) # bit and
+    print(bin(bits | 0b1111)) # bit or
 if __name__ == "__main__":
     # arith_oper()
     # complex_ex();
     # rel_oper()
     # variable_ex()
     # assginment_ex()
-    logical_oper()
+    #logical_oper()
+    bit_oper()
