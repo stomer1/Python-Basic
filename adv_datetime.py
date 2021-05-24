@@ -56,8 +56,26 @@ def timedelta_ex():
     diff = datetime.timedelta(100, 0, 0) # 100일의 간격 값
     print("100일 후:", current + diff)
 
+def format_date():
+    """
+    문자열의 포멧
+        datetime -> str : .strftime()
+        str -> datetime : .strptime()
+    """
+    current = datetime.datetime.now()
+    print("current:", current)
 
+    #datetime -> str
+    print(current.strftime("%Y-%m-%d %H:%M"))
+    print(current.strftime("%Y년 %m월 %d일 %H시 %M분"))
+
+    # str -> datetime : strptime()
+    s = "2021-05-24 17:00"
+    dt = datetime.datetime.strptime(s, # 변환할 문자열
+                                    "%Y-%m-%d %H:%M" )
+    print(dt, type(dt))
 
 if __name__ == "__main__":
     #get_datetime()
-    timedelta_ex()
+    #timedelta_ex()
+    format_date()
