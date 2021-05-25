@@ -31,7 +31,7 @@ def define_set():
     print(slice, type(slice))
 
     #lst.insert(3, slice)
-    print(lst)
+
     #lst[3] = slice
     #print(lst)
 
