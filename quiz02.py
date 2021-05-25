@@ -44,7 +44,6 @@ def q3():
         print("Balance:", balance)
 
     print("프로그램 종료")
-
 if __name__ == "__main__":
     #q1()
     q2()
