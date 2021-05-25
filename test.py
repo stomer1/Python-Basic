@@ -9,7 +9,6 @@ def define_str():
     # 문자열 모두 소문자
     print("소문자:", str.lower())
 
-
     lst = list(str)
     print(lst, type(lst))
     # 사용된 알파벳 수

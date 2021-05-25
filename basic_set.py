@@ -85,7 +85,7 @@ def loop():
     else:
         print()
 if __name__ == "__main__":
-    #define_set()
+    define_set()
     #set_methods()
     #set_oper()
-    loop()
+    #loop()
