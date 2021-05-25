@@ -24,12 +24,12 @@ def define_str():
 def define_set():
     lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     slice = lst[3:7]
-    print(slice[::-1])
     slice = slice[::-1]
-    del lst[3:7]
+    lst[3:7] = slice
+
     print(lst)
     print(slice, type(slice))
-    lst.insert(3, slice)
+
     #lst.insert(3, slice)
     print(lst)
     #lst[3] = slice
@@ -102,8 +102,8 @@ def quiz2():
 
 if __name__ == "__main__":
     #define_str()
-    #define_set()
+    define_set()
     #define_quiz()
     #quiz()
     #quiz1()
-    quiz2()
+    #quiz2()
