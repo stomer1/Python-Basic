@@ -91,14 +91,18 @@ def quiz2():
     in this guide, then the Python Mentors 
     group is available to help guide new contributors through the process."""
 
-    print("제거:", s.replace(",", ""), s.replace(".", ""), s.replace(" ", ""), s.upper())
+    s = s.replace(",", "").replace(".", "").replace("\n", "").upper()
+    print("제거:", s)
+
+    splits = s.split()
+    print(splits)
     #print("대문자:", s.upper())
 
 
 if __name__ == "__main__":
     #define_str()
-    define_set()
+    #define_set()
     #define_quiz()
     #quiz()
     #quiz1()
-    #quiz2()
+    quiz2()
