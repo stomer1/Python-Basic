@@ -1,13 +1,7 @@
 def define_str():
     str = "Life is too short, You need Python"
-    str1 = "Life is too short, You need Python".strip()
-    str2 = str1.strip()
-    # 문자열 내의 공백과 (,)를 제거
-    print("공백, 콤마제거:", str.replace(" ", "", ).replace(",", ""))
-    # 문자열 모두 대문자
-    print("대문자:", str.upper())
-    # 문자열 모두 소문자
-    print("소문자:", str.lower())
+
+    str = str.lower().replace(" ", "").replace(",", "")
 
     lst = list(str)
     print(lst, type(lst))
@@ -16,6 +10,7 @@ def define_str():
     print(chars, type(chars))
 
     lst = list(chars)
+    lst.sort()
     print(lst, type(lst))
 
     lst.sort()
