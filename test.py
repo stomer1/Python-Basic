@@ -99,6 +99,8 @@ def quiz2():
     #print("대문자:", s.upper())
 
 
+
+
 if __name__ == "__main__":
     #define_str()
     #define_set()

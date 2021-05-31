@@ -55,7 +55,7 @@ def packing_unpacking():
     # 기본 Unpacking
     (a, b, c, d) = tp
     print(a, b, c, d)
-    a, b, c, d = tp # 기본 언패킹
+    a, b, c, b = tp # 기본 언패킹
     print(a, b, c, d)
 
     # 좌변의 변수 갯수와 우변의 값의 갯수가 일치 않으면 ValueError
