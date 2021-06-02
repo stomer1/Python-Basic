@@ -6,7 +6,6 @@ def connect():
     client = MongoClient("mongodb://localhost:27017")
     return client
 
-# 접속 테스트
 def test_connect():
     conn = connect()
     #print(dir(conn))
@@ -14,7 +13,7 @@ def test_connect():
     for db in conn.list_database_names():
         print(db)
 
-# 컬렉션 확인
+
 def test_collection():
     # 접속
     conn = connect()
@@ -23,7 +22,6 @@ def test_collection():
     # 컬렉션 선택
     coll = db['pymongo']
     return coll
-
 
 def test_insert():
     # 컬렉션 확보
@@ -39,20 +37,21 @@ def test_insert():
     print(x.inserted_id)
 
 
-def test_inser_many():
+
+def test_insert_many():
     coll = test_collection()
 
-    # 여러 문서 삽입시에는 []로 문서 전달
     xs = coll.insert_many([
-        {"name": "고길동", "address": "서울", "methoed": "insert_many"},
-        {"name": "장길산", "method": "insert_many"},
-        {"name": "임꺽정", "job": "도적"}
-
+        {"name": "고길동", "hp": "010-10**-23**", "tel": "02-43**-90**"},
+        {"name": "도우너", "hp": "010-55**-55**", "tel": "02-43**-90**"},
+        {"name": "마이콜", "hp": "010-99**-77**", "tel": "02-43**-90**"},
+        {"name": "또치", "hp": "010-88**-90**", "tel": "02-43**-90**"},
+        {"name": "남승균", "hp": "010-98**-14**", "tel": "02-9**-98**"}
     ])
 
-    # insert_many -> inserted_ids
     print(xs.inserted_ids)
-    print(len(xs.inserted_ids), "개의 레코드 삽입되었음")
+    print(len(xs.inserted_ids), "개 레코드 삽입되었음")
+
 
 from datetime import datetime
 def test_update():
@@ -86,9 +85,9 @@ def test_delete_by_filter(filter = {}):
     print(xs.deleted_count, "개의 레코드가 삭제!")
 import re # 정규표현식 객체
 if __name__ == "__main__":
-#    test_connect()
+    test_connect()
 #    test_insert()
-#    test_inser_many()
+    test_insert_many()
 #    test_update()
 #   test_select_by_filter(projection={
 #       "name": 1, "address": 1, "_id": 0
@@ -106,4 +105,5 @@ if __name__ == "__main__":
     # db.pymongo.delete({"address": "서울"})
     # 전체 문서 삭제
     #db.pymongo.delete({})
-    test_delete_by_filter()
+#    test_delete_by_filter()
+
