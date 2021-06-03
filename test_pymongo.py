@@ -1,4 +1,5 @@
 # pip install pymongo
+import pymongo
 from pymongo import MongoClient
 
 # 접속 함수
@@ -12,6 +13,7 @@ def test_connect():
     print("데이터베이스:")
     for db in conn.list_database_names():
         print(db)
+
 
 
 def test_collection():
@@ -52,6 +54,13 @@ def test_insert_many():
     print(xs.inserted_ids)
     print(len(xs.inserted_ids), "개 레코드 삽입되었음")
 
+def test_project():
+    print("****************************")
+    print("*    전화번호 관리 프로그램    *")
+    print("****************************")
+    print("1.리스트 2.등록 3.삭제 4.검색 5.종료")
+    print("-------------------------------")
+    print(">메뉴번호:")
 
 from datetime import datetime
 def test_update():
@@ -85,9 +94,9 @@ def test_delete_by_filter(filter = {}):
     print(xs.deleted_count, "개의 레코드가 삭제!")
 import re # 정규표현식 객체
 if __name__ == "__main__":
-    test_connect()
+#    test_connect()
 #    test_insert()
-    test_insert_many()
+#    test_insert_many()
 #    test_update()
 #   test_select_by_filter(projection={
 #       "name": 1, "address": 1, "_id": 0
@@ -106,4 +115,6 @@ if __name__ == "__main__":
     # 전체 문서 삭제
     #db.pymongo.delete({})
 #    test_delete_by_filter()
+    test_project()
+
 

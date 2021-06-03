@@ -133,4 +133,4 @@ if __name__ == "__main__":
     #test_insert_bulk_data(db_file)
     #test_select_data(db_file)
     #test_search_data(db_file)
-    test_mysqlite_class(db_file)
+    #test_mysqlite_class(db_file)

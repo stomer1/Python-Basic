@@ -67,11 +67,5 @@ if __name__ == "__main__":
     #test_connect()
     #test_basic_query()
     #test_placeholder()
-    test_dictionary()
-
-
-
-
-
-
+    #test_dictionary()
 
