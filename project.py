@@ -43,20 +43,38 @@ def test_insert_many():
     coll = test_collection()
 
     xs = coll.insert_many([
-        {"name": "고길동", "hp": "010-10**-23**", "tel": "02-43**-90**", "method": "insert_many"},
-        {"name": "도우너", "hp": "010-55**-55**", "tel": "02-43**-90**", "method": "insert_many"},
-        {"name": "마이콜", "hp": "010-99**-77**", "tel": "02-43**-90**", "method": "insert_many"},
-        {"name": "또치", "hp": "010-88**-90**", "tel": "02-43**-90**", "method": "insert_many"},
+        {"name": "고길동", "hp": "010-10**-23**", "tel": "02-43**-90**"},
+        {"name": "도우너", "hp": "010-55**-55**", "tel": "02-43**-90**"},
+        {"name": "마이콜", "hp": "010-99**-77**", "tel": "02-43**-90**"},
+        {"name": "또치", "hp": "010-88**-90**", "tel": "02-43**-90**"},
         {"name": "남승균", "hp": "010-98**-14**", "tel": "02-9**-98**"}
     ])
 
-    print(xs.inserted_ids)
-    print(len(xs.inserted_ids), "개 레코드 삽입되었음")
+    #print(xs.inserted_ids)
+    #print(len(xs.inserted_ids), "개 레코드 삽입되었음")
+
+def test_project():
+
+    print("****************************")
+    print("*    전화번호 관리 프로그램    *")
+    print("****************************")
+    print("1.리스트 2.등록 3.삭제 4.검색 5.종료")
+    print("-------------------------------")
+    print(">메뉴번호:")
+    num = input()
+    # if (num == 1):
+    #     print(coll)
+
+
+
+
+
 
 
 if __name__ == "__main__":
-#    connect()
-#    test_connect()
-#    test_collection()
-#    test_insert()
-#    test_insert_many()
+    connect()
+    test_connect()
+    test_collection()
+    #test_insert()
+    test_insert_many()
+    test_project()
